@@ -219,14 +219,14 @@ img.lazy.loaded {
 /* Smaller screens */
 @media (max-width: 768px) {
   .page[data-title=Cover]::before {
-    width: 35vw; /* bigger relative to viewport */
-    max-width: 250px;
+    width: 90vw; /* bigger relative to viewport */
+    max-width: 480px;
   }
 }
 @media (max-width: 480px) {
   .page[data-title=Cover]::before {
-    width: 45vw;
-    max-width: 100px;
+    width: 100vw;
+    max-width: 400px;
   }
 }
 @keyframes logoGlow {
