@@ -199,13 +199,8 @@ img.lazy.loaded {
 
 /* === COVER PAGE === */
 .page[data-title="Cover"] {
-  background-color: var(--bg-dark); /* Fallback color */
-  background-image: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    #142670,
-    #050a30 40%
-  );
-  transition: background 0.2s ease-out; /* Smooths the effect slightly */
+  background-color: var(--bg-dark);
+  transition: background 0.2s ease-out;
   color: white;
   display: flex;
   justify-content: center;
@@ -214,13 +209,6 @@ img.lazy.loaded {
   position: relative;
   overflow: hidden;
 }
-
-/* @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-} */
-
 /* === WATERMARK LOGO === */
 .page[data-title="Cover"]::before {
   content: "";

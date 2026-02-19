@@ -87,18 +87,6 @@ window.addEventListener("touchend", (e) => {
 container.style.transform = "translateX(0)";
 pages[0].classList.add("active");
 
-// === Mouse-Follow Spotlight Effect ===
-const coverPage = document.getElementById("p-cover");
-if (coverPage) {
-  coverPage.addEventListener("mousemove", (e) => {
-    const rect = coverPage.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    coverPage.style.setProperty("--x", `${x}px`);
-    coverPage.style.setProperty("--y", `${y}px`);
-  });
-}
-
 // === Hide Scroll Hint on About Page Scroll (Corrected) ===
 const aboutPageSheet = document.querySelector("#p-about .sheet");
 const scrollHint = document.querySelector("#p-about .scroll-hint");
