@@ -87,6 +87,10 @@ window.addEventListener("touchend", (e) => {
 container.style.transform = "translateX(0)";
 pages[0].classList.add("active");
 
+// === Mouse-Follow Spotlight Effect ===
+const coverPage = document.getElementById("p-cover");
+
+
 // === Hide Scroll Hint on About Page Scroll (Corrected) ===
 const aboutPageSheet = document.querySelector("#p-about .sheet");
 const scrollHint = document.querySelector("#p-about .scroll-hint");
