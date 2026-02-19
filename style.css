@@ -410,13 +410,13 @@ img.lazy.loaded {
 /* Specific layout for the About page */
 #p-about .content.spread {
   display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-    width: 100%;
-    flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start; /* Changed from center */
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  flex-grow: 1;
 }
 
 /* Main column with the text */
@@ -426,11 +426,11 @@ img.lazy.loaded {
   min-width: 300px;
 }
 
-/* Side column with the photo */
 #p-about .side {
   flex: 1;
-  /* Takes up 1/3 of the space */
   text-align: center;
+  position: sticky; /* Keeps the photo on screen while scrolling */
+  top: 2rem; 
 }
 
 /* Styling the "About" heading */
@@ -451,8 +451,8 @@ img.lazy.loaded {
 
 /* Styling for your profile photo */
 .photo {
-  width: 180px;
-  height: 180px;
+  width: 240px; /* Increased from 180px */
+  height: 240px; /* Increased from 180px */
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid #fff;
