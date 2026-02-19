@@ -38,7 +38,6 @@ pages.forEach((page, i) => {
   nav.appendChild(iconBtn);
 });
 
-// === Go To Page Function ===
 function goToPage(index) {
   if (isTransitioning) return;
   if (index < 0) index = 0;
@@ -55,25 +54,13 @@ function goToPage(index) {
   setTimeout(() => (isTransitioning = false), 800);
 }
 
-// === Update Icon States ===
 function updateIcons() {
   document.querySelectorAll(".icon-btn").forEach((btn, i) => {
     btn.classList.toggle("active", i === currentPage);
   });
 }
 
-// === IMPORTANT: MOUSEWHEEL SCROLL DISABLED FOR PAGE TURNING ===
-// This allows for normal vertical scrolling on pages without interference.
-// window.addEventListener("wheel", (e) => {
-//   if (isTransitioning) return;
-//   // Check if the scroll is primarily horizontal (like on a trackpad)
-//   if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-//     if (e.deltaX > 0) goToPage(currentPage + 1);
-//     else if (e.deltaX < 0) goToPage(currentPage - 1);
-//   }
-// });
 
-// === Touch Navigation (Mobile Swipe) ===
 let startX = 0;
 window.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
 window.addEventListener("touchend", (e) => {
@@ -83,14 +70,11 @@ window.addEventListener("touchend", (e) => {
   if (endX - startX > 60) goToPage(currentPage - 1);
 });
 
-// === Initialize ===
 container.style.transform = "translateX(0)";
 pages[0].classList.add("active");
 
-// === Mouse-Follow Spotlight Effect ===
 const coverPage = document.getElementById("p-cover");
 
-// === Hide Scroll Hint on About Page Scroll (Corrected) ===
 const aboutPageSheet = document.querySelector("#p-about .sheet");
 const scrollHint = document.querySelector("#p-about .scroll-hint");
 if (aboutPageSheet && scrollHint) {

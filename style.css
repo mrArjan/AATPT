@@ -21,10 +21,6 @@ html, body {
   background: #f2f2f2;
 }
 
-/* ======================================= */
-/* === LAZY LOADING STYLES             === */
-/* ======================================= */
-
 img.lazy {
   opacity: 0;
   /* Start fully transparent */
@@ -49,7 +45,6 @@ img.lazy.loaded {
 }
 
 /* === PAGE STYLING === */
-/* This rule now correctly handles both centering AND scrolling */
 .sheet {
   width: 100%;
     height: 100%;
@@ -59,7 +54,6 @@ img.lazy.loaded {
   
     display: flex;
     flex-direction: column;
-    /* This tells the content to always start from the top */
     justify-content: flex-start;
 }
 
